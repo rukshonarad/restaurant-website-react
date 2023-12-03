@@ -1,9 +1,11 @@
-import spaghetti from "../../assets/menu-spaghetti.png";
-import star from "../../assets/star-filled.svg";
-import gnocchi from "../../assets/menu-gnocchi.png";
-import ravioli from "../../assets/menu-rovioli.png";
-import splitza from "../../assets/menu-splitza.png";
-import risoto from "../../assets/menu-risoto.png";
+import spaghetti from "../../../../assets/menu-spaghetti.png";
+import star from "../../../../assets/star-filled.svg";
+import gnocchi from "../../../../assets/menu-gnocchi.png";
+import ravioli from "../../../../assets/menu-rovioli.png";
+import splitza from "../../../../assets/menu-splitza.png";
+import risoto from "../../../../assets/menu-risoto.png";
+import peneAlaVodka from "../../../../assets/menu-penne-alla-vodak.png";
+import "./Menu.css";
 const Menu = () => {
     return (
         <section id="menu-section">
@@ -86,7 +88,7 @@ const Menu = () => {
                     </div>
                     <div class="card">
                         <img
-                            src="./assets/menu-penne-alla-vodak.png"
+                            src={peneAlaVodka}
                             alt="Spaghetti"
                             class="card__img"
                         />

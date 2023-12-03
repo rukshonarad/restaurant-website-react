@@ -1,17 +1,9 @@
 import "./App.css";
-import { Header } from "./components/Header/Header";
-import { Hero } from "./components/Hero/hero";
-import { Welcome } from "./components/Welcome/welcome";
-import { Menu } from "./components/Menu/menu";
-import { Reservation } from "./components/Reservation/reservation";
+import { Home } from "./pages/home/Home";
 function App() {
     return (
         <>
-            <Header />
-            <Hero />
-            <Welcome />
-            <Menu />
-            <Reservation />
+            <Home />
         </>
     );
 }
