@@ -39,7 +39,7 @@
     font-size: 14px;
 }
 
-#navigation__link {
+.navigation__links li:first-child li a {
     color: var(--orange-color);
 }
 

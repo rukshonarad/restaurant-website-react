@@ -1,5 +1,5 @@
-import salad from "../../assets/salad.png";
-
+import salad from "../../../../assets/salad.png";
+import "./Welcome.css";
 const Welcome = () => {
     return (
         <section id="welcome-section">

@@ -1,4 +1,4 @@
-import reservation from "../../assets/reservation.png";
+import reservation from "../../../../assets/reservation.png";
 const Reservation = () => {
     return (
         <section id="reservation-section">
