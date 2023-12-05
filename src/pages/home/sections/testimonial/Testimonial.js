@@ -1,50 +1,43 @@
-import customerSecond from "../../../../assets/customer-2.png";
-import customerFirst from "../../../../assets/customer-1.png";
-import customerThird from "../../../../assets/customer-3.png";
+import React from "react";
 import "./Testimonial.css";
-const Testimonial = () => {
-    return (
-        <section id="testimonials-section">
-            <div class="testimonials-section__container container">
-                <h2>What Customer Say</h2>
-                <div class="testimonials-section__testimonials">
-                    <div class="testimonials-section__testimonial">
-                        <img src={customerSecond} alt="Starla Virgoun" />
-                        <h4>Starla Virgoun</h4>
-                        <h5>Finansial Advisor</h5>
-                        <p>
-                            The ambiance was cozy and welcoming, and the staff
-                            were friendly and attentive. The menu offered a
-                            great variety of Italian dishes, and the food was
-                            absolutely delicious.
-                        </p>
-                    </div>
-                    <div class="testimonials-section__testimonial">
-                        <img src={customerFirst} alt=" Tosh Mat" />
-                        <h4>Tosh Mat</h4>
-                        <h5>Uber Driverr</h5>
-                        <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing
-                            elit. Maxime in laboriosam deserunt molestiae
-                            voluptatem fugiat quaerat ratione. Doloribus,
-                            tenetur! .
-                        </p>
-                    </div>
+import { testimonials } from "./data";
 
-                    <div class="testimonials-section__testimonial">
-                        <img src={customerThird} alt="James Steven" />
-                        <h4>James Steven</h4>
-                        <h5>Teacher</h5>
-                        <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing
-                            elit. Maxime in laboriosam deserunt molestiae
-                            voluptatem fugiat quaerat ratione. Doloribus,
-                            tenetur! .
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
+const Testimonial = (props) => {
+    return (
+        <div className="testimonials-section__testimonial">
+            <img src={props.image} alt={props.name} />
+            <h4>{props.name}</h4>
+            <h5>{props.job}</h5>
+            <p>{props.text}</p>
+        </div>
     );
 };
-export { Testimonial };
+
+class Testimonials extends React.Component {
+    render() {
+        return (
+            <section id="testimonials-section">
+                <div className="testimonials-section__container container">
+                    <div>
+                        <h2>Our customers say</h2>
+                        <div className="testimonials-section__testimonials">
+                            {testimonials.map((testimonial, idx) => {
+                                return (
+                                    <Testimonial
+                                        key={idx}
+                                        name={testimonial.name}
+                                        image={testimonial.image}
+                                        job={testimonial.job}
+                                        text={testimonial.text}
+                                    />
+                                );
+                            })}
+                        </div>
+                    </div>
+                </div>
+            </section>
+        );
+    }
+}
+
+export { Testimonials };
