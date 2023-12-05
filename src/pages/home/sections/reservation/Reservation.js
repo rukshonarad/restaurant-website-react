@@ -1,4 +1,5 @@
 import reservation from "../../../../assets/reservation.png";
+import "./Reservation.css";
 const Reservation = () => {
     return (
         <section id="reservation-section">

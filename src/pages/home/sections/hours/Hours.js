@@ -1,4 +1,4 @@
-import "./Hours";
+import "./Hours.css";
 const Hours = () => {
     return (
         <section id="hours-section">

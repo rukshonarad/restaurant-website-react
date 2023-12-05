@@ -1,6 +1,7 @@
 import twitter from "../../../../assets/twitter.svg";
 import instagram from "../../../../assets/instagram.svg";
 import facebook from "../../../../assets/facebook.svg";
+import "./Footer.css";
 const Footer = () => {
     return (
         <footer id="footer">

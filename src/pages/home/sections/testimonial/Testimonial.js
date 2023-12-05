@@ -1,6 +1,7 @@
 import customerSecond from "../../../../assets/customer-2.png";
 import customerFirst from "../../../../assets/customer-1.png";
 import customerThird from "../../../../assets/customer-3.png";
+import "./Testimonial.css";
 const Testimonial = () => {
     return (
         <section id="testimonials-section">

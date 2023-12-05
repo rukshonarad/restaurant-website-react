@@ -1,6 +1,7 @@
 import betran from "../../../../assets/betran.png";
 import ferry from "../../../../assets/ferry.png";
 import iswan from "../../../../assets/iswan.png";
+import "./Chefs.css";
 const Chefs = () => {
     return (
         <section id="chefs-section">
