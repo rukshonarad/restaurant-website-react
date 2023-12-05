@@ -1,20 +1,24 @@
-import logoWhite from "../../../../assets/logo-white.svg";
-import cart from "../../../../assets/cart.svg";
 import "./TopNavigation.css";
+import cartIcon from "../../../../assets/cart.svg";
+import logo from "../../../../assets/logo-white.svg";
+import { Button } from "../../../../design-system/Button";
 
 const links = [
-    { text: "Home", link: "http://google.com" },
+    { text: "Home", link: "https://google.com" },
     { text: "Menu", link: "https://facebook.com" },
-    { text: "About Us", link: "http://google.com" },
-    { text: "Reservation", link: "http://google.com" },
-    { text: "Home", link: "http://google.com" }
+    { text: "About Us", link: "" },
+    {
+        text: "Reservation",
+        link: ""
+    },
+    { text: "Contact Us", link: "./contact.html" }
 ];
 
 const TopNavigation = () => {
     return (
         <header className="header">
-            <nav className="navigation container">
-                <img src={logoWhite} alt="DeliziOso" className="logo-white" />
+            <nav className="navigation">
+                <img src={logo} alt="DeliziOso" className="logo-white" />
                 <ul className="navigation__links">
                     {links.map((link, idx) => {
                         return (
@@ -26,17 +30,15 @@ const TopNavigation = () => {
                 </ul>
                 <div className="navigation__actions">
                     <figure>
-                        <img src={cart} alt="Shopping Cart" />
+                        <img src={cartIcon} alt="Shopping Cart" />
                     </figure>
-                    <button
-                        className="btn btn-sm btn-green"
-                        onClick={() => alert("My name is Rukhshona")}
-                    >
+                    <Button size="sm" color="green">
                         Log In
-                    </button>
+                    </Button>
                 </div>
             </nav>
         </header>
     );
 };
+
 export { TopNavigation };
